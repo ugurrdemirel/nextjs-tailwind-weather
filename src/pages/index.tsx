@@ -59,7 +59,7 @@ export default function Home() {
   }
 
   function renderWeather() {
-    return apiData?.result.map((items, id) =>
+    return apiData?.result.slice(1).map((items, id) =>
       <Weather key={id} {...items} isToday={false} city={apiData.city} />
     )
   }
